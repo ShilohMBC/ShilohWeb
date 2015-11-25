@@ -1,0 +1,89 @@
+H1,H2,H3
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+	padding: 0px;
+	margin: 0px;
+}
+
+H1 
+{
+	padding-bottom: 5px;
+	font-size: 12pt;
+	font-variant: small-caps;
+	color: Maroon;
+	text-decoration: underline;
+}
+
+H2
+{
+	font-size:10pt;
+	text-decoration: underline;
+	padding-top: 3px;
+	padding-bottom: 5px;
+}
+
+H3
+{
+	font-size: 10pt;
+	padding-top: 3px;
+	padding-bottom: 4px;
+	color: blue;
+}
+
+.bold, .emphasis {	font-weight: bold; }
+.emphasis { font-style: italic; }
+.hidden { display: block; visibility: hidden; position: absolute; }
+
+.topicMenu
+{
+	font-size: 8pt;
+	font-family: Verdana, Arial, Sans-Serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+.topicMenu a
+{
+	color: Navy;
+	font-variant: small-caps;
+	font-weight: bold;
+	padding-left: 20px;
+}
+
+.topicMenu a:hover
+{
+	text-decoration: none;
+	color: maroon;
+}
+
+.topicMenuHeader
+{
+	font-weight: bold;
+	font-size: 10pt;
+	text-align: center;		
+}
+
+.ministryPreamble, .ministryBlock
+{
+	font-family: Verdana, Arial, Sans-Serif;
+	font-size: 10pt;
+	color: black;
+	padding: 10px 5px;
+}
+
+.ministryPreamble img
+{
+	float: left;
+	border: 0px solid black;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+.ministryBlockSub
+{
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
+.ministryList {	margin-top: 2px; list-style: square; }

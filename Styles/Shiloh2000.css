@@ -1,0 +1,900 @@
+﻿/* Cascading Style Sheet
+    Shiloh Missionary Baptist Church
+    Version 1.0  2009.09.01
+    Impact Custom Solutions, LLC
+    -- Layout --     -- pixel to em conversions --
+    5 column                base: 16px = 1em
+    Elastic Grid              h1: 18px = 1.125em
+    60em width                h2: 16px = 1.0em
+    10em col                  h3: 14px = 0.875em
+    1em gutter                 p: 12px = 0.75em
+                            line: 18px = varies based on current font-size
+    -- Swatch --
+    #xxxxxx : Deep Red
+    #xxxxxx : Pale Rose Red
+    #xxxxxx : Soft Pink
+    #xxxxxx : Dark Grey Brown
+    #b0a99e : Medium Grey Brown
+    #xxxxxx : Light Grey Brown
+*/
+
+/* -- Resets & Overrides -- */
+    html {                  /* Accomodate IE 5.x and 6.x font scaling problems */
+        font-size:100%; }
+    body  {
+        background:#d8d8d8;       
+        border:0;			/* Accomodate IE 5.x and 6.x viewport border problems */
+        font-size:1.0em;
+        font-family: Myriad Pro, Segoe UI, Trebuchet MS, Arial, Sans-Serif;
+        margin:0;           
+        padding:0;
+        text-align:center; }
+    img {
+        border:none; }      /* Accomodate IE 5.x and 6.x image border problems */
+
+/* -- Links & Type -- */
+	a { text-decoration:none; }
+	a:hover {
+	    color:#fff;
+	    height:100%;
+	    text-decoration:none; }
+	a.logo, a.logo:hover { 
+        position:absolute;
+        top:0;
+        left:0;
+        height:9.375em;
+        width:11.375em;
+        z-index:1;  }
+	a.logo img { 
+        height:9.375em;
+        width:11.375em; }
+	a.location { 
+        position:absolute;
+        top:0.5em;
+        right:5.5em;
+        font-size:0.75em;
+        color:White;
+        text-decoration:none; }
+	a.location img { 
+        height:0.75em;
+        margin-left:0.5em;
+        width:0.75em;
+        visibility:hidden; } 
+	a.location:hover img { 
+        height:0.75em;
+        margin-left:0.5em;
+        width:0.75em;
+        visibility:hidden; }
+    .loginLink
+    {
+        position: absolute;
+        top:0.5em;
+        right: 1.50em;
+        font-size: 0.75em;
+        color: White;
+        text-decoration: none;
+    }
+    .loginLink:HOVER
+    {
+        font-weight: bold;
+        color: Yellow;
+    }        
+    dt { 
+        float:left;
+        clear:left;
+        width:10.0em;
+        text-align:right; }
+    dd { 
+	    border-left:solid 1px #8e0000;
+	    margin-left:11.0em;
+	    padding-left:0.5em;
+	    padding-bottom:0.5em; }        
+/* -- Form Elements -- */
+    form {              /* -- We are using .Net, so all page content is wrapped with a form tag -- */
+        background-color:#ffffff;
+        margin:1.5em auto;
+        text-align:left;
+        width:60em; }
+    fieldset { 
+        border: 1px dotted #ccc;
+        margin: 0.5em;
+        padding: 0.5em;
+        width:50.4em; }
+    legend { 
+        font-size: 0.825em;
+        font-weight: bold;
+        color: #000088;
+        background-color: #fff; }
+    form label { 
+        float: left;
+        width: 15em;
+        font-size: 0.75em;
+        font-weight: bold;
+        line-height:1.25em;
+        text-align:right;
+        vertical-align:middle; }
+    .label 
+    {
+        font-size: 0.75em;
+        font-weight: bold;
+        line-height:1.25em;
+    }    
+    h1, h2, h3 {
+        margin:0;
+        padding:0;
+        font-family: Myriad Pro, Segoe UI, Trebuchet MS, Arial, Sans-Serif; }
+    h1 { font-size:1.125em;
+         line-height:1.0em;
+         margin:1.0em; }
+    h2 { color:#8e0000;
+         font-size:1.0em;
+         line-height:1.125em;
+         margin:1.125em; }
+    h3 { font-size:0.875em;
+         line-height:1.25em;
+         margin:1.25em; }
+    p { 
+        color:#282828;
+        font-size:0.75em;
+        line-height:1.5em;
+        margin:1.5em; }
+/* -- Primary Layout -- */
+	#footer {               /* -- All Pages -- */
+        margin:auto;
+        width:60em;
+        background-color: #000;
+	    border-top:1px dashed #282828;
+	    text-align:center; }
+    #identity {             /* -- All Pages -- */
+        position:relative;
+        height:7.0em;
+        z-index:25; }                       
+	#primaryMenu {          /* -- All Pages -- */
+        position:absolute;
+        right:1.0em;
+        bottom:2.0em;
+        height:2.0em; }
+    #promotion {            /* -- Home Page -- */
+        position:relative;
+        z-index:0;
+        height:16.0em;
+        background: transparent url('../Images/promotionBackground.png') repeat-x bottom right; }
+	#siteMap {              /* -- All Pages -- */
+	    clear:both;
+	    margin:auto;
+	    width:60em;
+	    background-color:#000; }
+    #subjectHeading {       /* -- Subject Pages -- */
+        position:relative;
+        height:2.5em;
+        background:transparent url('../Images/subjectHeadingBackground.jpg') repeat-x bottom right;
+        border-bottom:solid 1px #8f8474;
+        z-index:10; }
+/* -- Secondary Layout -- */
+/* -- Home Page: Subject Blocks --  */
+    div.subjectBlock {
+        background-color:#b0a99e;
+        height:5.0em;
+        margin:0;
+        padding:0;
+        position:relative;
+        right:1.0em;
+        width:24.0em; }
+    div.subjectBlock:hover {
+        background-color:#aea9a1; }
+	.subjectBlock a { 
+        position:absolute;
+        top:0;
+        display:block;
+        height:5.0em;
+        margin:0;
+        padding:0;
+        width:24.0em; }
+	.subjectBlock a:hover { 
+        background:url('../Images/whiteArrowCircle.gif') no-repeat center right; }
+    .subjectBlock img {
+        float:left;
+        width:5.0em;
+        height:5.0em;
+        margin:0;
+        border:0; }
+    .subjectBlock h1 {
+        font-size:0.75em;
+        font-variant:small-caps;
+        left:0.5em;
+        line-height:1.25em;
+        margin:0.3em 0 0 0.3em;
+        padding:0;
+        position:relative; }
+    .subjectBlock p {
+        position:relative;
+        left:0.5em;
+        line-height:1.25em;
+        margin:0 0.5em 0 0.5em;
+        padding:0;
+        font-size:0.75em;
+        color:White; }
+    .subjectBlock cite {
+        margin:0 0.5em 0 0;
+        padding:0;
+        font-size:0.75em;
+        color:White; }
+/*  -- Event/Activity list --  */
+    .eventDate {     /* - Date - */
+        font-size:0.9em;
+        font-variant:small-caps;
+        margin:0.3em 0 0.3em 0;
+        padding:0; }
+    .eventDate a, .vevent a:hover {     /* - Show all events - */
+        color:black; }
+    div.vevent {
+        height:3.0em;
+        margin:0;
+        padding:0;
+        position:relative;
+        width:11.0em; }
+    div.vevent:hover {
+        background:#fbf7fb; }
+    .vevent abbr {    /* - Start Time - */
+        font-size:0.75em;
+        font-weight:bold;
+        font-variant:small-caps;
+        color:#bb9999; }
+    .vevent h2 {     /* - Activity Name - */
+        font-size:0.75em;
+        margin:0;
+        padding:0; }
+    .vevent p {  /* - Host - */
+        color:#999999;
+        font-size:0.7em;
+        font-style:italic;
+        margin:0;
+        padding:0; }
+    .vevent a {     /* - link - */
+        position:absolute;
+        top:0;
+        left:-1.25em;
+        display:block;
+        height:2.75em;
+        width:12.25em; }
+    .vevent a:hover {
+        background:transparent url('../Images/roseArrowCircle.gif') no-repeat center left; }
+/* Calendar on Home Page  */
+    .calendar { 
+        height:15.0em;
+        left:4.0em;
+        margin:0;
+        padding:0;
+        position:relative;
+        width:16.0em; }
+/* Sermon Series on Home Page  */
+    .sermonSeries { 
+        border: solid 1px #555555;
+        top:0.5em;
+        height:5.0em;
+        left:4.0em;
+        margin-bottom:2.0em;
+        position:relative;
+        width:15.0em; }
+    .sermonSeries h1 { 
+        left:0.5em;
+        position:relative;
+        top:0.5em;
+        font-size:1.0em;
+        font-variant:small-caps;
+        margin:0;
+        padding:0; }
+    .sermonSeries p {
+        display:inline-block;
+        height:2.0em;
+        margin:0;
+        padding:0;
+        position:relative;
+        top:1.0em;
+        width:20.0em; }
+    .sermonSeries em {
+        color:#8f8474;
+        font-size:1.125em;
+        left:1.75em;
+        line-height:1.0em;
+        position:absolute; }
+    .sermonSeries a { 
+        position:absolute;
+        left:0.5em;
+        top:0;
+        display:block;
+        height:1.25em;
+        width:18em; }
+    .sermonSeries a:hover {
+        background:url('../Images/roseArrowCircle.gif') no-repeat center left; }
+/* -- Micro-formats -- */
+    .vcalendar {
+        float:left;
+        margin:2.0em;
+        width:20.0em; }
+    .vevent {}
+    .dtstart {}
+    .summary {}
+    .category{}
+    .description {}
+    .url {}
+    .location {}
+    .organizer {}
+/* -- General Usage -- */
+    .defaultMargin {
+        margin:0 1.0em 0 1.0em; }
+    .fullPage  { width:60em ; }
+    .fourColumn { width:48em; }
+    .threeColumn { width:36em; }
+    .halfPage { width:30em; }
+    .twoColumn { width:24em; }
+    .oneColumn { width:12em; }
+    
+    .left { float:left; }
+    .right { float:right; }
+    .clear { clear:both; }
+                  
+	.twoColumn dl { 
+        margin:0;
+        padding:0;
+        font-size:0.9em; }
+    .twoColumn dt { 
+        float:left;
+        clear:left;
+        width:4.5em;
+        text-align:right; }
+    .twoColumn dd { 
+	    padding:0 0 0 1.0em;
+	    margin:0 2.0em 0 5.0em; }        
+    .smallMap {
+        margin:2.0em; }
+/* -- Primary Navigation Menu: Resides within identity -- */
+	#identity>img { 
+        height:7em; 
+        width:60em; }
+/* -- Primary Navigation Menu: Resides within identity -- */
+	#primaryMenu ul { 
+        list-style:none;}
+	#primaryMenu ul li { 
+        display:inline;
+        margin-left:0.5em;
+        text-align:center;
+        font-size:1.0em;
+        color:White; }
+	#primaryMenu ul li a { 
+        color:#fff;
+        text-decoration:none;
+        text-transform:uppercase; }
+	#primaryMenu ul li:hover { background-color:#bc3b34; }
+	#primaryMenu ul li a.active,
+	#primaryMenu ul li a.active:hover { background-color:#bc3b34; }
+/*  --  Login action and logged in message: Resides within identity -- */	
+	a.login { 
+        position:absolute;
+        right:0em;
+        bottom:-2.0em;
+        font-size:0.75em;
+        color:White;
+        text-transform:uppercase;
+        text-decoration:none; }
+/* --  Home Page Promotion: layout and content tags -- */
+   #promotion img {
+        position:absolute;
+        right:1.0em;
+        top:0.75em;
+        width:24em;
+        border:0; }
+   #promotion h1 {  
+        position:absolute;
+        left:1.0em;
+        top:1.0em;
+        padding:0;
+        font-size:2.0em;
+        color:#ffffff; }
+   #promotion p { 
+        position:absolute;
+        left:2.2em;
+        top:1.2em;
+        font-size:1.25em;
+        width:24em; }  
+   #promotion ul {
+        clear:left;
+        position:absolute;
+        bottom:0.75em;
+        left:1.0em;
+        z-index:2;
+        background:blue; }
+   #promotion a, #promotion a:hover { 
+        position:absolute;
+        left:28em;
+        bottom:0.5em;
+        color:#ffffff; }
+/* -- Secondary Page Styles -- */
+/* -- Subject Heading: heading for all subject pages excluding the homepage -- */
+    #subjectHeading h1 {
+        font-size:1.5em;
+        left:7.0em;
+        position:absolute;
+        top:-1.0em; }
+/* -- Subject Navigation: The second menu level used to move between topics within a primary subject. --  */
+    #subjectHeading ul  {
+        position:absolute;
+        right:1.0em;
+        bottom:0.1em;
+        list-style:none;
+        margin:0; }
+    #subjectHeading li { 
+        display: inline;
+        font-size:0.9em;
+        margin:0;
+        padding:0.2em 0.5em 0.2em 0.5em;
+        color: white;
+        background:#8f8474; }
+    #subjectHeading li.current {  
+        color:#8f8474;
+        background:#efefe9;
+        border-left:solid 1px #8f8474;
+        border-right:solid 1px #8f8474;
+        border-top:solid 1px #8f8474; }
+    #subjectHeading li a {  
+        text-decoration: none;
+        color: white; }
+    #subjectHeading li a:hover { 
+        color: yellow; }
+/* -- A directory of people or communities -- */
+	.directory { 
+	    position:relative; width:60.0em; }
+	.directory .entry { 
+	    border-bottom:dashed 1px #eee;
+	    height:11.0em;
+	    position:relative;
+	    top:0; }
+	.directory .entry a {
+	    font-size: 0.75em; }
+	.directory .entry a:hover {
+	    color:#8f8474; }
+	.directory .entry dl {
+	    font-size:0.75em;
+	    left:34.0em;
+	    position:absolute;
+	    top:2.0em; }
+	.directory .entry img { 
+	    left:1.0em;
+	    position:absolute;
+	    top:0;
+	    margin:0.5em;
+	    width:7.0em }
+	.directory .entry .fullDetails { 
+	    position:absolute;
+	    left:10.0em;
+	    top:0; }
+	.directory .entry .fullDetails h3 {
+	    font-size: 0.875em;
+	    left:0.0em;
+	    position:absolute;
+	    top:0;
+	    width:36.0em; }
+	.directory .entry .fullDetails p {
+	    font-size: 0.75em;
+	    left:0.0em;
+	    position:absolute;
+	    top:1.5em;
+	    width:36.0em; }
+	.directory .entry .fullDetails a {
+	    font-size: 10pt;
+	    
+
+     }
+	.directory .entry .fullDetails a:hover {
+	    color:#8f8474; }
+/* -- Unique styles for history pages -- */
+	.historyBlock { 
+	    clear:both;
+	    display:block;
+	    position:relative; }
+	.historyBlock p { 
+	    vertical-align:middle; }
+	.historyBlock img { 
+	    background:#eeeeee;
+	    border:solid 1px grey;
+	    margin:auto;
+	    padding:0.5em; }
+    .historyBlock cite { 
+        color:gray;
+        display:block;
+        font-size:0.7em;
+        font-weight:bold;
+        text-align:center; }
+/* -- A list of media entries -- */
+	.mediaList { 
+	    position:relative; width:350px; }
+	.mediaEntry { 
+	    border-bottom:dashed 1px #eee;
+	    height:5.0em;
+	    position:relative; }
+	.mediaEntry h3 {
+	    font-size: 0.875em;
+	    left:2.5em;
+	    margin:0;
+	    position:absolute;
+	    padding:0;
+	    top:0; }
+	.mediaEntry p {
+	    font-size: 0.75em;
+	    left:3.0em;
+	    margin:0;
+	    position:absolute;
+	    padding:0;
+	    top:1.5em; }
+	.mediaEntry a {
+	    font-size: 0.75em; }
+	.mediaEntry a:hover {
+	    color:#8f8474; }
+	.medaiEntry img { 
+	    left:0.5em;
+	    position:absolute;
+	    top:0;
+	    width:3.0em; }
+/* -- History page styles -- */
+	.historyBlock { 
+	    clear:both;
+	    display:block;
+	    position:relative; }
+	.historyBlock p { 
+	    vertical-align:middle; }
+	.historyBlock img { 
+	    background:#eeeeee;
+	    border:solid 1px brown;
+	    margin:auto;
+	    padding:0.5em; }
+    .historyBlock cite { 
+        color:gray;
+        display:block;
+        font-size:0.7em;
+        font-weight:bold;
+        text-align:center; }
+        
+    input .text { color: #000088;
+                  background-color:#e3f2f7;
+                  border: 1px inset #000088;
+                  width: 25em; }
+    /* Match h2 style within a borderless text field entry */
+    .itemHeadingEntry { color:#8e0000;
+                        background-color:#e3f2f7;
+                        font-family:Segoe UI, Helvetica Neue, Trebuchet MS, Arial, Sans-Serif;
+                        font-size:1.2em;
+                        font-weight:bold; }
+    /* Match paragraph style, but within a borderless text box */
+    .itemTextBoxEntry { color:#8e0000;
+                        background-color:#e3f2f7;
+                        font-family:Segoe UI, Helvetica Neue, Trebuchet MS, Arial, Sans-Serif;
+                        margin:1em;
+                        padding:0.25em;
+                        font-size:0.75em;
+                        color:#282828; }
+    /* Match legend style, but within a drop down list */
+    .legendDropList { font-size: 0.8em;
+             font-weight: bold;
+             color: #000088;
+             background-color: #fff; }
+
+/* Quote - used to display quotes within the body of the text.*/
+    .quote { 
+        display:inline;
+        text-align:right; }
+    .quote blockquote { 
+        margin:0.5em;
+        padding:0;
+        font-family:Times New Roman, Times, Serif;
+        font-style:italic;
+        font-size:1.25em;
+        font-weight:bold; }
+    .quote cite{ 
+        margin:0;
+        padding:0;
+        font-family:Times New Roman, Times, Serif;
+        font-weight:bold;
+        font-size: 1.0em; }
+    
+/* -- Entry Navigation: The third menu level used to change between entries within a topic 
+    when multiple entries are defined for display within a topic. */
+    .entryMenu  { clear: right;
+                  float:right;
+                  margin:0;
+                  padding: 0;
+                  font-size: 0.8em;
+                  color:White; }
+    .entryMenu h1 { padding: 0.25em 0.5em 0.25em 0.5em;
+                    font-size:0.8em;
+                    font-weight:bold;
+                    text-align:center;
+                    color: black;
+                    background: grey;
+                    border-bottom: dotted 1px #282828; }
+    .entryMenu li { padding: 0.25em 0.5em 0.25em 0.5em;
+                    list-style-type:none;
+                    color: yellow;
+                    background: black;
+                    border-bottom: dotted 1px #282828; }
+    .entryMenu li.current { color: #282828;
+                            background: white;
+                            border-bottom:0; }
+    .entryMenu li a { color: #eee;
+                      border: 1px solid #282828;
+                      text-decoration: none; }
+    .entryMenu li a:visited { color: white; }
+    .entryMenu li a:hover { color: yellow; }
+        
+/* Common Branding and Identity: layout as id elements and styles as class elements. */
+/* Site Map container and styles */
+	#siteMap .subjectGroup { 
+        display:block;
+        float:left;
+        margin:0.5em;
+        width:10.0em; }
+    #siteMap .subjectGroup h1 {
+        font-size: 0.8em;
+        color:Yellow; }
+    #siteMap .subjectGroup ul { 
+        margin:0;
+        padding:0;
+        list-style:none;
+        width:10.0em; }
+    #siteMap .subjectGroup li { 
+        float:left;
+        font-size:0.75em;
+        font-weight:bold;
+        color:white;
+        margin:0;
+        padding:0;
+        width:10.0em; }
+    #siteMap .subjectGroup li a { 
+        text-decoration:none;
+        color:white; }
+    #siteMap .subjectGroup dl { 
+        margin:0;
+        padding:0;}
+    #siteMap .subjectGroup dt { 
+        clear:left;
+        float:left;
+        font-size:0.75em;
+        color:white;
+        margin:0;
+        padding:0;
+        width:4.25em;
+        text-align:right; }
+    #siteMap .subjectGroup dd { 
+        font-size:0.75em;
+        margin-left:4.75em;
+        padding:0;
+        color:white; }
+    #siteMap .subjectGroup dd a {
+        color:white; }
+/* Footer container and styles */
+    #footer p {
+        clear:both;
+        font-size: 0.75em;
+        font-weight:bold;
+        color: White;
+        margin:0.5em 0 0.5em 0;
+        text-align:center; }
+    #footer a {
+        padding:0.1em;
+        font-weight:bold;
+        color:white;
+        margin:0;
+    }
+    
+/* Partners page */       
+    .partnerLogo 
+    {
+        width: 100px;
+        border: 1px blue solid;
+    }
+    
+/* Prayer request */
+    .prayerRequest
+    {
+        width: 95%;
+    }
+    
+    .prayerRequest P
+    {
+        font-size:11pt;
+    }
+    
+    .prayerRequest label
+    {
+        text-align: left;
+        width: 205px;
+    }
+    
+    .prayerRequest .twoCols
+    {
+        text-align: left;
+        width: 400px;
+    }
+    
+    .prayerRequest .threeCols
+    {
+        text-align: left;
+        width: 600px;
+    }
+    
+    .prayerRequest div
+    {                
+        display: block;
+        border: 0px solid green;
+    }
+    
+    .rbLabel label
+    {
+        width: 50px;
+    }
+
+
+.error
+{
+    font-weight: bold;
+    color: Red;
+}
+
+.msgBox
+{
+    font-weight: bold;
+    border: 2px solid black;
+    color: Black;
+    background-color: rgb(255,255,128);
+    width: 400px;
+    padding: 8px;
+    position: absolute;
+    top: 300px;
+    left: 400px;
+}
+
+.popupCalendar
+{
+    border: 1px solid black;
+    color: Silver;    
+    position: absolute;
+    top: 80px;
+    left: 400px; 
+    width: 200px;   
+}
+
+.required
+{
+    color: Red;
+    font-weight: bold;
+}
+
+/* Prayer Wall */
+#prayerWall
+{
+    font-size: 12pt;
+    font-family: Arial;
+}
+
+#prayerWall LABEL
+{
+    color: Maroon;
+    font-size: 10pt;
+    width: 150px;
+    text-align: left;
+}
+
+#prayerWall .footerInfo
+{
+    color: Olive;
+    font-size: 10pt;
+}
+
+.prayerWallEntry
+{
+    width: 750px;
+    font-size: 12pt;
+}
+
+.prayWallResponse
+{
+    padding-left: 10px;
+    color: Maroon;
+    font-size: 10pt;
+}
+
+.prayerHilite
+{
+    background-color: rgb(255,255,150);
+}
+
+.noStyle A
+{    
+    position: relative;
+    top: 0px; 
+    left: 0px; 
+    margin: none; 
+    padding: none;
+}
+
+.actionButton
+{
+    border: 1px solid gray;
+    width: 130px;
+    padding: 5px 10px;
+    font-size: 11pt;
+    margin: 0px 4px;
+    display: inline;
+}
+
+.actionButton IMG
+{
+    float: left;
+    border: none;
+}
+
+.homePromoLink
+{
+    position:static;
+}
+
+
+.homeservices
+{
+    width: 200px;
+    font-size: 10pt;
+}
+.homeservices dl
+{
+    width: 200px;
+}
+
+.homeservices dd
+{
+    margin-left: 80px;
+}
+.homeservices dt
+{
+    text-align: right;
+    width: 75px;
+}
+
+.homeservices li
+{
+    color: Maroon;
+    list-style-type: square;
+}
+
+#homeMainContent
+{
+    width: 745px; 
+    margin-left: 8px; 
+    float: left;
+}
+
+#homeMainContent p
+{
+    font-size: 11pt;
+    margin: 0px 2px 8px 2px;
+}
+
+#onlineBible
+{
+    float: right; 
+    border: 1px solid Maroon; 
+    padding: 8px; 
+    width: 120px; 
+    font-size: 10pt; 
+    margin-left: 8px;
+}
+
+#onlineBible a
+{
+    color: Maroon;
+    text-decoration: underline;
+}
+
+.imgLeft
+{
+    float: left;
+    margin-right: 5px;
+}

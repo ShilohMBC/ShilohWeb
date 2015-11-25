@@ -1,0 +1,1187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD48D8A2-A59B-4243-AE96-ABC8D5E9BD3B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShilohWeb</RootNamespace>
+    <AssemblyName>ShilohWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabases>true</PublishDatabases>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICS.Utils">
+      <HintPath>..\Common\ICS.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutUs\Mission.aspx" />
+    <Content Include="AboutUs\OurHistory.aspx" />
+    <Content Include="AboutUs\PastorStaff.aspx" />
+    <Content Include="AboutUs\WebConferencing.aspx" />
+    <Content Include="AboutUs\WorshipServices.aspx" />
+    <Content Include="Administration\CommunityEntry.aspx" />
+    <Content Include="Administration\EventEntry.aspx" />
+    <Content Include="Administration\EventsHome.aspx" />
+    <Content Include="Administration\EventsList.aspx" />
+    <Content Include="Administration\Home.aspx" />
+    <Content Include="Administration\MediaEntry.aspx" />
+    <Content Include="Administration\MediaHome.aspx" />
+    <Content Include="Administration\MediaList.aspx" />
+    <Content Include="Administration\MemberEntry.aspx" />
+    <Content Include="Administration\MemberHome.aspx" />
+    <Content Include="Administration\MemberSearch.aspx" />
+    <Content Include="Administration\Member_Entry.aspx" />
+    <Content Include="Administration\PrayerRequestHome.aspx" />
+    <Content Include="Administration\PrayerRequestList.aspx" />
+    <Content Include="Administration\PrayerRequestPrint.aspx" />
+    <Content Include="Administration\PrayerResponse.aspx" />
+    <Content Include="Administration\PromotionScheduler.aspx" />
+    <Content Include="Calendar.aspx" />
+    <Content Include="ChildrensMinistry\About.aspx" />
+    <Content Include="ChildrensMinistry\Events.aspx" />
+    <Content Include="ChildrensMinistry\Programs.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="Contributions.aspx" />
+    <Content Include="Controls\ActionButton.ascx" />
+    <Content Include="Controls\Address.ascx" />
+    <Content Include="Controls\CommunityCalendar.ascx" />
+    <Content Include="Controls\DateTimeEntry.ascx" />
+    <Content Include="Controls\EventsCalendar.ascx" />
+    <Content Include="Controls\FilterDays.ascx" />
+    <Content Include="Controls\FilterMonthYear.ascx" />
+    <Content Include="Controls\Footer.ascx" />
+    <Content Include="Controls\Header.ascx" />
+    <Content Include="Controls\Login.ascx" />
+    <Content Include="Controls\MediaCategory.ascx" />
+    <Content Include="Controls\NaviTabs.ascx" />
+    <Content Include="Controls\PopUpMessage.ascx" />
+    <Content Include="Controls\PrimaryNav.ascx" />
+    <Content Include="Controls\SiteMap.ascx" />
+    <Content Include="Controls\StatesList.ascx" />
+    <Content Include="Controls\TabsAdmin.ascx" />
+    <Content Include="CSS Sampler.aspx" />
+    <Content Include="CurrentEvents.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Donation\Cancel.aspx" />
+    <Content Include="Donation\Donate.aspx" />
+    <Content Include="Donation\Success.aspx" />
+    <Content Include="EvangelismMinistry\About.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\5u84f48n.gif" />
+    <Content Include="Images\ABCA_Logo.png" />
+    <Content Include="Images\ABC_Org_Logo.png" />
+    <Content Include="Images\AdobePDFLogo.jpg" />
+    <Content Include="Images\anchorageAK.png" />
+    <Content Include="Images\a_Rev_1.jpg" />
+    <Content Include="Images\bannerBackground.png" />
+    <Content Include="Images\bg.jpg" />
+    <Content Include="Images\bg1.jpg" />
+    <Content Include="Images\bg2.jpg" />
+    <Content Include="Images\bg3.jpg" />
+    <Content Include="Images\bibleIcon.png" />
+    <Content Include="Images\blackArrow.gif" />
+    <Content Include="Images\Calendar.png" />
+    <Content Include="Images\CalendarAdd24x24.png" />
+    <Content Include="Images\CalendarDisabled.png" />
+    <Content Include="Images\CalendarRefresh24x24.png" />
+    <Content Include="Images\CameraAdd24x24.png" />
+    <Content Include="Images\CameraRefresh24x24.png" />
+    <Content Include="Images\Cancel.png" />
+    <Content Include="Images\carIcon.png" />
+    <Content Include="Images\choirPerformance.png" />
+    <Content Include="Images\congregation.jpg" />
+    <Content Include="Images\congregation.png" />
+    <Content Include="Images\currentPromo.jpg" />
+    <Content Include="Images\Delete.png" />
+    <Content Include="Images\Edit.png" />
+    <Content Include="Images\glowSprite.jpg" />
+    <Content Include="Images\History_ABPatterson.jpg" />
+    <Content Include="Images\History_DailyNewsArticle.jpg" />
+    <Content Include="Images\History_DailyNewsArticle_thmb.jpg" />
+    <Content Include="Images\History_Groundbreaking_19750830.jpg" />
+    <Content Include="Images\History_RevJohnHoliday.gif" />
+    <Content Include="Images\History_RevJohnHoliday_thumb.gif" />
+    <Content Include="Images\History_Shiloh.jpg" />
+    <Content Include="Images\History_Shiloh10.jpg" />
+    <Content Include="Images\History_Shiloh10_thmb.jpg" />
+    <Content Include="Images\History_Shiloh16.jpg" />
+    <Content Include="Images\History_Shiloh16_thmb.jpg" />
+    <Content Include="Images\History_Shiloh2.jpg" />
+    <Content Include="Images\History_Shiloh21.jpg" />
+    <Content Include="Images\History_Shiloh21_thmb.jpg" />
+    <Content Include="Images\History_Shiloh2_thmb.jpg" />
+    <Content Include="Images\History_Shiloh4.jpg" />
+    <Content Include="Images\History_Shiloh4_thmb.jpg" />
+    <Content Include="Images\History_Shiloh8.jpg" />
+    <Content Include="Images\History_Shiloh8thAve.jpg" />
+    <Content Include="Images\History_Shiloh8thAve_thmb.jpg" />
+    <Content Include="Images\History_Shiloh8_thmb.jpg" />
+    <Content Include="Images\History_ShilohCurrent.jpg" />
+    <Content Include="Images\History_Shiloh_thmb.jpg" />
+    <Content Include="Images\homepage.swf" />
+    <Content Include="Images\homepage1.swf" />
+    <Content Include="Images\homePromo.gif" />
+    <Content Include="Images\homePromo.jpg" />
+    <Content Include="Images\homePromo.png" />
+    <Content Include="Images\homePromo_default.gif" />
+    <Content Include="Images\image001.gif" />
+    <Content Include="Images\mediaMinistryMouse.jpg" />
+    <Content Include="Images\logoBackground.png" />
+    <Content Include="Images\magnifyingGlass.gif" />
+    <Content Include="Images\mediaMinistryLogo.png" />
+    <Content Include="Images\memberSearch_32x32.png" />
+    <Content Include="Images\menuBg.jpg" />
+    <Content Include="Images\MLK_AK_logo.jpg" />
+    <Content Include="Images\MLK_Org_Logo.png" />
+    <Content Include="Images\navAboutUs.gif" />
+    <Content Include="Images\navAboutUs_hi.gif" />
+    <Content Include="Images\navBlank.gif" />
+    <Content Include="Images\navCalendar.gif" />
+    <Content Include="Images\navCalendar_hi.gif" />
+    <Content Include="Images\navCurrent.gif" />
+    <Content Include="Images\navCurrent_hi.gif" />
+    <Content Include="Images\NavigationSprite.gif" />
+    <Content Include="Images\navInformation.gif" />
+    <Content Include="Images\navInformation_hi.gif" />
+    <Content Include="Images\navLeftNav.gif" />
+    <Content Include="Images\navLocation.gif" />
+    <Content Include="Images\navLocation_hi.gif" />
+    <Content Include="Images\navMinistries.gif" />
+    <Content Include="Images\navMinistries_hi.gif" />
+    <Content Include="Images\navOurPastor.gif" />
+    <Content Include="Images\navOurPastor_hi.gif" />
+    <Content Include="Images\navResources.gif" />
+    <Content Include="Images\navResources_hi.gif" />
+    <Content Include="Images\navSchedule.gif" />
+    <Content Include="Images\NBC_Org_Logo.png" />
+    <Content Include="Images\noImage.gif" />
+    <Content Include="Images\noImage.png" />
+    <Content Include="Images\otherPromo.jpg" />
+    <Content Include="Images\Pastor2006sm.jpg" />
+    <Content Include="Images\pastorAnniversary2009.jpg" />
+    <Content Include="Images\PastorPat.png" />
+    <Content Include="Images\PastorPatterson.png" />
+    <Content Include="Images\Pastors40th.PNG" />
+    <Content Include="Images\pastorShiloh.gif" />
+    <Content Include="Images\pastorSignature.gif" />
+    <Content Include="Images\PastorsSignature02.jpg" />
+    <Content Include="Images\PrayerResponseDisabled.png" />
+    <Content Include="Images\PrayerResponseOff.png" />
+    <Content Include="Images\PrayerResponseOn.png" />
+    <Content Include="Images\Printer.png" />
+    <Content Include="Images\Printer24x24.png" />
+    <Content Include="Images\PrinterDisabled.png" />
+    <Content Include="Images\promotionBackground.png" />
+    <Content Include="Images\pulpitCross.png" />
+    <Content Include="Images\Refresh24x24.png" />
+    <Content Include="Images\Report.png" />
+    <Content Include="Images\ReportDisabled.png" />
+    <Content Include="Images\reverendPatterson.png" />
+    <Content Include="Images\reviseHome2_01.gif" />
+    <Content Include="Images\reviseHome2_02.gif" />
+    <Content Include="Images\reviseHome2_03.gif" />
+    <Content Include="Images\reviseHome2_04-over.gif" />
+    <Content Include="Images\reviseHome2_04.gif" />
+    <Content Include="Images\reviseHome2_05.gif" />
+    <Content Include="Images\reviseHome2_06-over.gif" />
+    <Content Include="Images\reviseHome2_06.gif" />
+    <Content Include="Images\reviseHome2_07.gif" />
+    <Content Include="Images\reviseHome2_08.gif" />
+    <Content Include="Images\reviseHome2_09-over.gif" />
+    <Content Include="Images\reviseHome2_09.gif" />
+    <Content Include="Images\reviseHome2_10.gif" />
+    <Content Include="Images\reviseHome2_11-over.gif" />
+    <Content Include="Images\reviseHome2_11.gif" />
+    <Content Include="Images\reviseHome2_12-over.gif" />
+    <Content Include="Images\reviseHome2_12.gif" />
+    <Content Include="Images\reviseHome2_13-over.gif" />
+    <Content Include="Images\reviseHome2_13.gif" />
+    <Content Include="Images\reviseHome2_14.gif" />
+    <Content Include="Images\reviseHome2_15.gif" />
+    <Content Include="Images\reviseHome2_16.gif" />
+    <Content Include="Images\reviseHome2_17.gif" />
+    <Content Include="Images\reviseHome2_18.gif" />
+    <Content Include="Images\reviseHome2_19.gif" />
+    <Content Include="Images\reviseHome2_20.gif" />
+    <Content Include="Images\reviseHome2_21.gif" />
+    <Content Include="Images\reviseHome2_22.gif" />
+    <Content Include="Images\reviseHome2_23.gif" />
+    <Content Include="Images\reviseHome2_24.gif" />
+    <Content Include="Images\reviseHome2_25.gif" />
+    <Content Include="Images\reviseHome2_26.gif" />
+    <Content Include="Images\roseArrow.gif" />
+    <Content Include="Images\roseArrowCircle.gif" />
+    <Content Include="Images\Save.png" />
+    <Content Include="Images\SCDILogo1.JPG" />
+    <Content Include="Images\SCHIlogo.jpg" />
+    <Content Include="Images\sermonSeriesBackground.png" />
+    <Content Include="Images\sermonSeriesLeft.png" />
+    <Content Include="Images\sermonSeriesRight.png" />
+    <Content Include="Images\shilohBackground.gif" />
+    <Content Include="Images\shilohChurch.gif" />
+    <Content Include="Images\shilohChurch.jpg" />
+    <Content Include="Images\shilohHomeAnimation.swf" />
+    <Content Include="Images\ShilohLeftNav.png" />
+    <Content Include="Images\ShilohLeftNav_Hi.png" />
+    <Content Include="Images\shilohLogo.gif" />
+    <Content Include="Images\ShilohLogo.jpg" />
+    <Content Include="Images\shilohMap.gif" />
+    <Content Include="Images\ShilohNav.jpg" />
+    <Content Include="Images\ShilohNav.png" />
+    <Content Include="Images\ShilohPromo.jpg" />
+    <Content Include="Images\ShilohRedBanner.PNG" />
+    <Content Include="Images\ShilohStreaming.png" />
+    <Content Include="Images\shilohWelcome.png" />
+    <Content Include="Images\sk_borderBot_pink.jpg" />
+    <Content Include="Images\sk_borderTop_pink.jpg" />
+    <Content Include="Images\sk_butterfly.png" />
+    <Content Include="Images\sk_disciples.png" />
+    <Content Include="Images\sk_event_music.jpg" />
+    <Content Include="Images\sk_event_popsday.jpg" />
+    <Content Include="Images\sk_event_recharge.jpg" />
+    <Content Include="Images\sk_event_summer.jpg" />
+    <Content Include="Images\sk_flowerpot.jpg" />
+    <Content Include="Images\sk_kidfigures_bg.PNG" />
+    <Content Include="Images\sk_kids.png" />
+    <Content Include="Images\sk_kidsbg.png" />
+    <Content Include="Images\sk_kidzchuch.png" />
+    <Content Include="Images\sk_rhino.png" />
+    <Content Include="Images\sk_shilohkids.png" />
+    <Content Include="Images\SMBCMinstryFair2011.jpg" />
+    <Content Include="Images\SMBC_MKL2010.png" />
+    <Content Include="Images\mediaMinistryHdfones.jpg" />
+    <Content Include="Images\mediaMinstryMouse.jpg" />
+    <Content Include="Images\specialEvent.png" />
+    <Content Include="Images\subjectArrow.png" />
+    <Content Include="Images\subjectBackground.png" />
+    <Content Include="Images\subjectHeadingBackground.jpg" />
+    <Content Include="Images\top10.png" />
+    <Content Include="Images\UserFemale.png" />
+    <Content Include="Images\whiteArrowCircle.gif" />
+    <Content Include="Images\whiteArrowRed.gif" />
+    <Content Include="Info.aspx" />
+    <Content Include="InfoAboutUs.html" />
+    <Content Include="InfoLocation.aspx" />
+    <Content Include="InfoLocation.html" />
+    <Content Include="InfoServices.html" />
+    <Content Include="Location.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Media.aspx" />
+    <Content Include="MediaMinistry\About.aspx" />
+    <Content Include="Media\MediaDirectory.aspx" />
+    <Content Include="Member\Home.aspx" />
+    <Content Include="MensMinistry\About.aspx" />
+    <Content Include="MensMinistry\Calendar.aspx" />
+    <Content Include="MensMinistry\Gallery.aspx" />
+    <Content Include="MensMinistry\Membership.aspx" />
+    <Content Include="MensMinistry\Newsletter.aspx" />
+    <Content Include="Ministries - Copy.aspx" />
+    <Content Include="Ministries.aspx" />
+    <Content Include="Ministries\AdminSupportMinistry.aspx" />
+    <Content Include="Ministries\ChildrensMinistry.aspx" />
+    <Content Include="Ministries\CommunityDevelopment.aspx" />
+    <Content Include="Ministries\Discipleship.aspx" />
+    <Content Include="Ministries\Evangelism.aspx" />
+    <Content Include="Ministries\FoodWedding.aspx" />
+    <Content Include="Ministries\Media.aspx" />
+    <Content Include="Ministries\MensMinistry.aspx" />
+    <Content Include="Ministries\MinistryEntry.aspx" />
+    <Content Include="Ministries\MinstryEntryHome.aspx" />
+    <Content Include="Ministries\Prayer.aspx" />
+    <Content Include="Ministries\SeniorAdult.aspx" />
+    <Content Include="Ministries\WomensMinistry.aspx" />
+    <Content Include="Ministries\YoungAdult.aspx" />
+    <Content Include="Ministries\YouthMinistry.aspx" />
+    <Content Include="MusicWorshipArtsMinistry\About.aspx" />
+    <Content Include="MusicWorshipArtsMinistry\PastoralCareMinistry\About.aspx" />
+    <Content Include="ParishMinistry\About.aspx" />
+    <Content Include="Partners.aspx" />
+    <Content Include="PastoralCareMinistry\About.aspx" />
+    <Content Include="People\ReverendAlonsoPatterson.aspx" />
+    <Content Include="PrayerMinistry\About.aspx" />
+    <Content Include="PrayerMinistry\PrayerRequest.aspx" />
+    <Content Include="PrayerMinistry\PrayerWall.aspx" />
+    <Content Include="Scripts\shiloh.js" />
+    <Content Include="SeniorMinistry\About.aspx" />
+    <Content Include="Shiloh2000.com\memberSearch_32x32.png" />
+    <Content Include="Shiloh2000.com\PrayerResponseDisabled.png" />
+    <Content Include="Shiloh2000.com\PrayerResponseOff.png" />
+    <Content Include="Shiloh2000.com\PrayerResponseOn.png" />
+    <Content Include="Shiloh2000.com\PrinterDisabled.png" />
+    <Content Include="Shiloh2000.com\ReportDisabled.png" />
+    <Content Include="Shiloh2000.com\UserFemale.png" />
+    <Content Include="SickandShutInMinistry\About.aspx" />
+    <Content Include="SingleAdultMinistry\About.aspx" />
+    <Content Include="Students24-7Ministry\About.aspx" />
+    <Content Include="Styles\shiloh.css" />
+    <Content Include="Styles\Shiloh2000 - Copy.css" />
+    <Content Include="Styles\Shiloh2000.css" />
+    <Content Include="Styles\shilohMinistry.css" />
+    <Content Include="TelevisionMinistry\About.aspx" />
+    <Content Include="TransportationMinistry\About.aspx" />
+    <Content Include="UserLogin.aspx" />
+    <Content Include="WomensMinistry\About.aspx" />
+    <Content Include="WomensMinistry\Calendar.aspx" />
+    <Content Include="WomensMinistry\Programs.aspx" />
+    <Content Include="YoungAdultMinistry\About.aspx" />
+    <Content Include="YouthMinistry\About.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs\Mission.aspx.cs">
+      <DependentUpon>Mission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\Mission.aspx.designer.cs">
+      <DependentUpon>Mission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs\OurHistory.aspx.cs">
+      <DependentUpon>OurHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\OurHistory.aspx.designer.cs">
+      <DependentUpon>OurHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs\PastorStaff.aspx.cs">
+      <DependentUpon>PastorStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\PastorStaff.aspx.designer.cs">
+      <DependentUpon>PastorStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs\WebConferencing.aspx.cs">
+      <DependentUpon>WebConferencing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\WebConferencing.aspx.designer.cs">
+      <DependentUpon>WebConferencing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs\WorshipServices.aspx.cs">
+      <DependentUpon>WorshipServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs\WorshipServices.aspx.designer.cs">
+      <DependentUpon>WorshipServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\CommunityEntry.aspx.cs">
+      <DependentUpon>CommunityEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\CommunityEntry.aspx.designer.cs">
+      <DependentUpon>CommunityEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\EventEntry.aspx.cs">
+      <DependentUpon>EventEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\EventEntry.aspx.designer.cs">
+      <DependentUpon>EventEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\EventsHome.aspx.cs">
+      <DependentUpon>EventsHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\EventsHome.aspx.designer.cs">
+      <DependentUpon>EventsHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\EventsList.aspx.cs">
+      <DependentUpon>EventsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\EventsList.aspx.designer.cs">
+      <DependentUpon>EventsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\MediaEntry.aspx.cs">
+      <DependentUpon>MediaEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\MediaEntry.aspx.designer.cs">
+      <DependentUpon>MediaEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\MediaHome.aspx.cs">
+      <DependentUpon>MediaHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\MediaHome.aspx.designer.cs">
+      <DependentUpon>MediaHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\MediaList.aspx.cs">
+      <DependentUpon>MediaList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\MediaList.aspx.designer.cs">
+      <DependentUpon>MediaList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\MemberEntry.aspx.cs">
+      <DependentUpon>MemberEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\MemberEntry.aspx.designer.cs">
+      <DependentUpon>MemberEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\MemberHome.aspx.cs">
+      <DependentUpon>MemberHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\MemberHome.aspx.designer.cs">
+      <DependentUpon>MemberHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\MemberSearch.aspx.cs">
+      <DependentUpon>MemberSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\MemberSearch.aspx.designer.cs">
+      <DependentUpon>MemberSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\Member_Entry.aspx.cs">
+      <DependentUpon>Member_Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\Member_Entry.aspx.designer.cs">
+      <DependentUpon>Member_Entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\PrayerRequestHome.aspx.cs">
+      <DependentUpon>PrayerRequestHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\PrayerRequestHome.aspx.designer.cs">
+      <DependentUpon>PrayerRequestHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\PrayerRequestList.aspx.cs">
+      <DependentUpon>PrayerRequestList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\PrayerRequestList.aspx.designer.cs">
+      <DependentUpon>PrayerRequestList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\PrayerRequestPrint.aspx.cs">
+      <DependentUpon>PrayerRequestPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\PrayerRequestPrint.aspx.designer.cs">
+      <DependentUpon>PrayerRequestPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\PrayerResponse.aspx.cs">
+      <DependentUpon>PrayerResponse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\PrayerResponse.aspx.designer.cs">
+      <DependentUpon>PrayerResponse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\PromotionScheduler.aspx.cs">
+      <DependentUpon>PromotionScheduler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administration\PromotionScheduler.aspx.designer.cs">
+      <DependentUpon>PromotionScheduler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseAdminPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseGlobals.cs" />
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrensMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChildrensMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrensMinistry\Events.aspx.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChildrensMinistry\Events.aspx.designer.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrensMinistry\Programs.aspx.cs">
+      <DependentUpon>Programs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChildrensMinistry\Programs.aspx.designer.cs">
+      <DependentUpon>Programs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contributions.aspx.cs">
+      <DependentUpon>Contributions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contributions.aspx.designer.cs">
+      <DependentUpon>Contributions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ActionButton.ascx.cs">
+      <DependentUpon>ActionButton.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ActionButton.ascx.designer.cs">
+      <DependentUpon>ActionButton.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Address.ascx.cs">
+      <DependentUpon>Address.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Address.ascx.designer.cs">
+      <DependentUpon>Address.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CommunityCalendar.ascx.cs">
+      <DependentUpon>CommunityCalendar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CommunityCalendar.ascx.designer.cs">
+      <DependentUpon>CommunityCalendar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DateTimeEntry.ascx.cs">
+      <DependentUpon>DateTimeEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DateTimeEntry.ascx.designer.cs">
+      <DependentUpon>DateTimeEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EventsCalendar.ascx.cs">
+      <DependentUpon>EventsCalendar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\EventsCalendar.ascx.designer.cs">
+      <DependentUpon>EventsCalendar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FilterDays.ascx.cs">
+      <DependentUpon>FilterDays.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FilterDays.ascx.designer.cs">
+      <DependentUpon>FilterDays.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FilterMonthYear.ascx.cs">
+      <DependentUpon>FilterMonthYear.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\FilterMonthYear.ascx.designer.cs">
+      <DependentUpon>FilterMonthYear.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Login.ascx.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Login.ascx.designer.cs">
+      <DependentUpon>Login.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MediaCategory.ascx.cs">
+      <DependentUpon>MediaCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MediaCategory.ascx.designer.cs">
+      <DependentUpon>MediaCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NaviTabs.ascx.cs">
+      <DependentUpon>NaviTabs.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\NaviTabs.ascx.designer.cs">
+      <DependentUpon>NaviTabs.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PopUpMessage.ascx.cs">
+      <DependentUpon>PopUpMessage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PopUpMessage.ascx.designer.cs">
+      <DependentUpon>PopUpMessage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PrimaryNav.ascx.cs">
+      <DependentUpon>PrimaryNav.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PrimaryNav.ascx.designer.cs">
+      <DependentUpon>PrimaryNav.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SiteMap.ascx.cs">
+      <DependentUpon>SiteMap.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SiteMap.ascx.designer.cs">
+      <DependentUpon>SiteMap.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StatesList.ascx.cs">
+      <DependentUpon>StatesList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\StatesList.ascx.designer.cs">
+      <DependentUpon>StatesList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TabsAdmin.ascx.cs">
+      <DependentUpon>TabsAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\TabsAdmin.ascx.designer.cs">
+      <DependentUpon>TabsAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CSS Sampler.aspx.cs">
+      <DependentUpon>CSS Sampler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSS Sampler.aspx.designer.cs">
+      <DependentUpon>CSS Sampler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentEvents.aspx.cs">
+      <DependentUpon>CurrentEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CurrentEvents.aspx.designer.cs">
+      <DependentUpon>CurrentEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Donation\Cancel.aspx.cs">
+      <DependentUpon>Cancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Donation\Cancel.aspx.designer.cs">
+      <DependentUpon>Cancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Donation\Donate.aspx.cs">
+      <DependentUpon>Donate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Donation\Donate.aspx.designer.cs">
+      <DependentUpon>Donate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Donation\Success.aspx.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Donation\Success.aspx.designer.cs">
+      <DependentUpon>Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EvangelismMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EvangelismMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Info.aspx.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Info.aspx.designer.cs">
+      <DependentUpon>Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoLocation.aspx.cs">
+      <DependentUpon>InfoLocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoLocation.aspx.designer.cs">
+      <DependentUpon>InfoLocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Location.aspx.cs">
+      <DependentUpon>Location.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Location.aspx.designer.cs">
+      <DependentUpon>Location.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Shiloh.Master.cs">
+      <DependentUpon>Shiloh.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Shiloh.Master.designer.cs">
+      <DependentUpon>Shiloh.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Media.aspx.cs">
+      <DependentUpon>Media.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Media.aspx.designer.cs">
+      <DependentUpon>Media.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MediaMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MediaMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Media\MediaDirectory.aspx.cs">
+      <DependentUpon>MediaDirectory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Media\MediaDirectory.aspx.designer.cs">
+      <DependentUpon>MediaDirectory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Member\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Member\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MensMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MensMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MensMinistry\Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MensMinistry\Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MensMinistry\Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MensMinistry\Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MensMinistry\Membership.aspx.cs">
+      <DependentUpon>Membership.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MensMinistry\Membership.aspx.designer.cs">
+      <DependentUpon>Membership.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MensMinistry\Newsletter.aspx.cs">
+      <DependentUpon>Newsletter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MensMinistry\Newsletter.aspx.designer.cs">
+      <DependentUpon>Newsletter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries.aspx.cs">
+      <DependentUpon>Ministries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries.aspx.designer.cs">
+      <DependentUpon>Ministries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\AdminSupportMinistry.aspx.cs">
+      <DependentUpon>AdminSupportMinistry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\AdminSupportMinistry.aspx.designer.cs">
+      <DependentUpon>AdminSupportMinistry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\ChildrensMinistry.aspx.cs">
+      <DependentUpon>ChildrensMinistry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\ChildrensMinistry.aspx.designer.cs">
+      <DependentUpon>ChildrensMinistry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\CommunityDevelopment.aspx.cs">
+      <DependentUpon>CommunityDevelopment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\CommunityDevelopment.aspx.designer.cs">
+      <DependentUpon>CommunityDevelopment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\Discipleship.aspx.cs">
+      <DependentUpon>Discipleship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\Discipleship.aspx.designer.cs">
+      <DependentUpon>Discipleship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\Evangelism.aspx.cs">
+      <DependentUpon>Evangelism.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\Evangelism.aspx.designer.cs">
+      <DependentUpon>Evangelism.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\FoodWedding.aspx.cs">
+      <DependentUpon>FoodWedding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\FoodWedding.aspx.designer.cs">
+      <DependentUpon>FoodWedding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\Media.aspx.cs">
+      <DependentUpon>Media.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\Media.aspx.designer.cs">
+      <DependentUpon>Media.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\MensMinistry.aspx.cs">
+      <DependentUpon>MensMinistry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\MensMinistry.aspx.designer.cs">
+      <DependentUpon>MensMinistry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\MinistryEntry.aspx.cs">
+      <DependentUpon>MinistryEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\MinistryEntry.aspx.designer.cs">
+      <DependentUpon>MinistryEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\MinstryEntryHome.aspx.cs">
+      <DependentUpon>MinstryEntryHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\MinstryEntryHome.aspx.designer.cs">
+      <DependentUpon>MinstryEntryHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\Prayer.aspx.cs">
+      <DependentUpon>Prayer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\Prayer.aspx.designer.cs">
+      <DependentUpon>Prayer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\SeniorAdult.aspx.cs">
+      <DependentUpon>SeniorAdult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\SeniorAdult.aspx.designer.cs">
+      <DependentUpon>SeniorAdult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\WomensMinistry.aspx.cs">
+      <DependentUpon>WomensMinistry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\WomensMinistry.aspx.designer.cs">
+      <DependentUpon>WomensMinistry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\YoungAdult.aspx.cs">
+      <DependentUpon>YoungAdult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\YoungAdult.aspx.designer.cs">
+      <DependentUpon>YoungAdult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ministries\YouthMinistry.aspx.cs">
+      <DependentUpon>YouthMinistry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ministries\YouthMinistry.aspx.designer.cs">
+      <DependentUpon>YouthMinistry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusicWorshipArtsMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusicWorshipArtsMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ParishMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ParishMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Partners.aspx.cs">
+      <DependentUpon>Partners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Partners.aspx.designer.cs">
+      <DependentUpon>Partners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PastoralCareMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PastoralCareMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="People\ReverendAlonsoPatterson.aspx.cs">
+      <DependentUpon>ReverendAlonsoPatterson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="People\ReverendAlonsoPatterson.aspx.designer.cs">
+      <DependentUpon>ReverendAlonsoPatterson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrayerMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrayerMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrayerMinistry\PrayerRequest.aspx.cs">
+      <DependentUpon>PrayerRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrayerMinistry\PrayerRequest.aspx.designer.cs">
+      <DependentUpon>PrayerRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrayerMinistry\PrayerWall.aspx.cs">
+      <DependentUpon>PrayerWall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrayerMinistry\PrayerWall.aspx.designer.cs">
+      <DependentUpon>PrayerWall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeniorMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeniorMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SickandShutInMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SickandShutInMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SingleAdultMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SingleAdultMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Students24-7Ministry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Students24-7Ministry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TelevisionMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TelevisionMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TransportationMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TransportationMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WomensMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WomensMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WomensMinistry\Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WomensMinistry\Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WomensMinistry\Programs.aspx.cs">
+      <DependentUpon>Programs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WomensMinistry\Programs.aspx.designer.cs">
+      <DependentUpon>Programs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YoungAdultMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoungAdultMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YouthMinistry\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YouthMinistry\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administration\_sgbak\Home.aspx.cs.10542.1.2010-01-14.12-07-57.0380" />
+    <Content Include="Administration\_sgbak\Home.aspx.designer.cs.10543.1.2010-01-14.12-07-57.2411" />
+    <Content Include="Controls\_sgbak\DateTimeEntry.ascx.10552.2.2010-02-27.21-42-00.5869" />
+    <Content Include="Downloads\ShilohMinistryInfoEntry.pdf" />
+    <Content Include="MasterPages\Shiloh.Master" />
+    <Content Include="Shiloh2000.com\Shiloh2000.com.suo" />
+    <Content Include="Shiloh2000.com\Shiloh2000.com\_sgbak\Default.aspx.designer.cs.10987.6.2010-06-10.23-05-30.8694" />
+    <Content Include="Shiloh2000.com\Shiloh2000.com\_sgbak\Home.aspx.designer.cs.10277.6.2010-01-12.11-09-56.0468" />
+    <Content Include="Shiloh2000.com\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Diaconate\" />
+    <Folder Include="Media\Audio\" />
+    <Folder Include="Media\Broadcasts\" />
+    <Folder Include="Media\Documents\" />
+    <Folder Include="Media\Photos\" />
+    <Folder Include="Media\Video\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shiloh.BL\Shiloh.BL.csproj">
+      <Project>{d4f650b9-1c8c-4f8c-bba3-b3f64ca9d282}</Project>
+      <Name>Shiloh.BL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Downloads\Homebase Enrollment Form 2013.pdf" />
+    <None Include="Properties\PublishProfiles\Filecopy Site.pubxml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\Shilohweb Dropit.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61659</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:46795/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Shiloh.master.cs" Inherits="ShilohWeb.MasterPages.Shiloh" %>
+<%@ Register src="../Controls/Header.ascx" tagname="Header" tagprefix="uc1" %>
+<%@ Register src="../Controls/Footer.ascx" tagname="Footer" tagprefix="uc1" %>
+<%@ Register src="../Controls/SiteMap.ascx" tagname="SiteMap" tagprefix="uc1" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head runat="server">	
+        <title>Shiloh Missionary Baptist Church - Alaska</title>
+        
+	    <meta name="keywords" content="Shiloh, Missionary Baptist Church, Baptist Church, Alaska, Anchorage, African-American" />
+	    <meta name="description" content="Website for the Shiloh Missionary Baptist Church, Anchorage Alaska" />	
+	    <meta name="authors" content="Impact Custom Solutions and Papaya Design Studio" />
+	    <meta name="authorURLs" content="www.impactcustomsolutions.com, www.papayadesignstudio.com" />
+       
+        <link rel="stylesheet" type="text/css" href="../Styles/Shiloh2000.css" />
+        <script type="text/javascript" src="../Scripts/shiloh.js"></script>
+
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <form runat="server">
+            <uc1:Header ID="ucHeader" runat="server" />
+            <asp:ContentPlaceHolder ID="bodycontent" runat="server" />        
+            <uc1:SiteMap ID="ucSiteMap" runat="server" />
+            <uc1:Footer ID="ucFooter" runat="server" />
+        </form>
+    </body>
+</html>

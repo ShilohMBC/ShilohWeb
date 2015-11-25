@@ -1,0 +1,655 @@
+/* Cascading Style Sheet
+    Shiloh Missionary Baptist Church
+    Version 1.0  2009.09.01
+    Impact Custom Solutions, LLC
+    -- Design base: 5 column, 960 Elastic Grid
+*/
+
+/* General HTML tag Styles  */
+
+html { font-size: 100% }  /* This is here for IE */
+body { background-color: #282828;
+       margin: 0;
+       padding: 0;
+       border: 0;
+       font-family: Segoe UI, Helvetica Neue, Trebuchet MS, Arial, Sans-Serif;
+       font-size: 1em;
+       text-align: center; }
+
+h1 { font-size: 1.5em; }
+
+h2 { font-size: 1em; }
+
+h3 { font-size: 0.75em;
+     font-weight: bold; }
+
+p { font-size: 1em;
+    margin:.4em 0 .8em 0;
+    padding:0; }
+
+a, a:hover, a:visited { color: Maroon; }
+
+ul { padding: 0;
+     margin: 0;
+     color: black; }
+
+/* Layout Areas  */
+#wrap { width: 46.25em;
+        margin: 1.5em, auto;
+        border: 0.063em solid #ccc;
+        background: #fff;
+        text-align: left; }
+        
+#header { width: 100%;
+          height: 8.265em;
+          background: transparent url('../Images/ShilohRedBanner.png') top left;
+          position: relative; }
+
+#page { margin: 4% auto;
+        padding-left: 15.75em; }
+        
+#page .column { float: left;
+                position: relative; }
+
+#content { width: 100%; }
+
+#menu { width: 15.75em;
+        margin-left: -100%;
+        right: 15.75em; }
+        
+#footer { clear: both; }
+/*
+#menuList li { margin: 0px;
+           padding: 0px;
+           list-style: none; }
+*/ 
+#menu li, #menu a { width: 15.75em;
+                    display: block; }
+
+#footer { font-family: Segoe UI, Helvetica Neue, Trebuchet MS, Arial, Sans-Serif;
+          font-size: .5em;
+          text-align: right;
+          margin: .5em;
+          color: White; }
+
+#footer a:link, #footer a:visited { color: Orange; }
+
+#footer a:hover { color: Silver; }
+
+#container { background-color: White;
+             width:100%;
+             text-align: left;
+             margin: auto; }
+	
+#logo,logo:hover {
+    background: url(../Images/hdrLogo.gif) top left no-repeat;
+	width: 222px;
+	height: 138px;
+	left: 1px;
+	top: 0px;
+	position: absolute;	
+}
+
+/* No higlight or change, so this was removed...
+ #logo:hover
+{
+	background: url(../Images/hdrLogo.gif) top left no-repeat;
+}
+*/
+
+#login,#login:hover
+{
+	background: url(../Images/hdrLogIn.gif) top left no-repeat;
+	width: 63px;
+	height: 34px;
+	top: 0px;
+	right: 84px;
+	position: absolute;
+}
+
+#login:hover
+{
+	background: url(../Images/hdrLogIn_hi.gif) top left no-repeat;
+}
+
+#contactUs,#contactUs:hover
+{
+	background: url(../Images/hdrContactUs.gif) top left no-repeat;
+	width: 81px;
+	height: 34px;
+	top: 1px;
+	right: 1px;
+	position: absolute;
+}
+
+#contactUs:hover
+{
+	background: url(../Images/hdrContactUs_hi.gif) top left no-repeat;
+}
+
+/* left Nav*/
+#leftNav
+{
+	position: absolute;
+	height: 100%;
+	width: 222px;
+	top: 138px;
+	/*background: transparent url(../Images/ShilohLeftNav.jpg) top left no-repeat;*/
+	float: left;
+}
+
+#leftNavList
+{
+	display: block;
+	background-image: url(../Images/ShilohLeftNav.png);
+	width: 253px;
+	height: 254px;
+	position: relative;
+	margin: 0px auto; 
+	padding: 0px;
+}
+
+#leftNavList li
+{
+	margin: 0px; 
+	padding: 0px; 
+	list-style: none;
+}
+ 
+#leftNavList li, #leftNavList a
+{
+	width: 253px;
+	display: block;
+}
+
+#menu2, #menu1 a { height: 40px; }
+#menu2, #menu2 a { height: 35px; }
+#menu3, #menu3 a { height: 35px; }
+#menu4, #menu4 a { height: 33px; }
+#menu5, #menu5 a {	height: 35px; }
+#menu6, #menu6 a {	height: 33px; }
+#menu7, #menu7 a {	height: 33px; }
+
+#menu1 a:hover,#menu2 a:hover,#menu3 a:hover,#menu4 a:hover,#menu5 a:hover,#menu6 a:hover,#menu7 a:hover
+{
+    background-image: url('../Images/ShilohLeftNav_Hi.png');
+    background-color: Transparent;
+    background-repeat: no-repeat;
+}
+
+#menu1 a:hover { background-position: 0px 0px; }
+#menu2 a:hover { background-position: 0px -40px; }
+#menu3 a:hover { background-position: 0px -75px; }
+#menu4 a:hover { background-position: 0px -110px; }
+#menu5 a:hover { background-position: 0px -143px; }
+#menu6 a:hover { background-position: 0px -178px; }
+#menu7 a:hover { background-position: 0px -211px; }
+
+/* popup menus relaced with inline horizontal section links
+.leftNavMenuList
+{    
+    
+    border-style:ridge;
+    border: 3px ridge gray;
+    color: gray;
+    background-color: rgb(100,0,0);
+    font-family: Segoe UI, Helvetica Neue, Trebuchet MS, Sans-Serif;
+    font-size: 11pt;
+    list-style: none;
+    width: 220px;  
+}
+
+.leftNavMenuList A
+{
+    color: White;
+    text-decoration: none;
+}
+
+.leftNavMenuList A:HOVER
+{
+    color: rgb(232,149,47); /* shiloh orange
+    text-decoration: underline;
+}
+
+.leftNavMenuList li
+{
+    padding: 5px 0px 5px 20px;
+}   */
+
+#promo1
+{
+	position: absolute;	
+	border-top: 1px black dotted;
+	height: 173px;
+	width: 222px;
+	top: 253px;
+	left: 0px;
+	background: black url(../Images/top10.png) no-repeat center;
+}
+#promo2
+{
+	border-top: 1px gray dotted;
+	position: absolute;	
+	height: 173px;
+	width: 222px;
+	top: 426px;
+	left: 0px;
+	background-color: Background;
+	/*background: black url(../Images/top10.png) no-repeat center;*/
+}
+
+#flash
+{
+	height: 254px;
+	z-index: 10;
+}
+
+#mainContent
+{
+	color: Maroon;
+	background-color: White;
+	font-size: 10pt;
+	font-family:  Segoe UI, Helvetica Neue, Trebuchet MS, Sans-Serif;
+	position: relative;
+	top: 138px;
+	left: 222px;
+	z-index: 200;
+}
+
+#calendar
+{
+	position: relative;
+	width: 701px;
+	height: 650px;
+	top: 138px;
+	left: 0px;    
+}
+
+#mainContent > img
+{
+	float: left;
+	padding: 5px;
+}
+
+#mainContent > p
+{
+	padding: 7px 4px;
+	margin: 0px;
+}
+
+.normal
+{
+	color: Black;
+	font-weight: normal;
+	font-family: Segoe UI, Helvetica Neue, Trebuchet MS, Sans-Serif;
+}
+
+#calendarArea
+{
+	top: 138px;
+	position: relative;
+	width: 700px;
+	height: 600px;
+}
+
+/* See content defiition preceding this one 
+#content
+{
+	border-top: solid 0px black;
+	border-left: solid 0px maroon;
+	padding: 10px 5px 0px 5px;
+	height: 333px;
+	position: relative;
+}
+*/
+
+#frameContent
+{
+	background-color: White;
+	color: Maroon;
+	padding: 4px 8px;
+	font-size: 10pt;
+	text-align: left;
+}
+
+#frameContent H1
+{
+	margin: 0px 0px 8px 0px;
+	font-size: 12pt;
+	font-family: Segoe UI, Helvetica Neue, Trebuchet MS, Sans-Serif;
+	text-decoration: underline;
+}
+
+#frameContent img
+{
+	float: left;
+	border: 0px solid black;
+	padding: 5px 5px 5px 0px;	
+}
+
+.frameContentBody
+{
+	background-color: White;
+}
+
+#contentHome 
+{
+	border-top: solid 0px black;
+	border-left: solid 0px maroon;
+	padding: 10px 5px 0px 5px;
+	position: relative;	
+}
+
+#contentNormal 
+{
+	padding: 5px 5px 0px 5px;
+}
+
+#contentHome H1
+{
+	font-family: Segoe UI, Helvetica Neue, Trebuchet MS, Sans-Serif;
+	font-size: 16pt;
+	margin: 0px 0px 8px 0px;
+}
+
+#contentHome p
+{
+	margin: 0px 0px 5px 0px;
+}
+
+#ministryContent
+{
+    padding : 5px 5px 0px 5px;
+	height: 590px;
+	overflow: scroll;
+	position: relative;
+	padding-bottom: 10px;	
+}
+
+#ministryContent H2
+{
+    font-size: 13pt;
+}
+
+#ministryContent H3
+{
+    font-size: 11pt;
+    padding: 2px 1px;
+    margin: 0px;
+}
+
+#ministryContent UL
+{
+    margin: 10px 0px 10px 40px;
+}
+/* Topic navigation */
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.solidblockmenu
+{
+margin: 0;
+padding: 0;
+float: left;
+font: bold 11px Segoe UI, Helvetica Neue, Trebuchet MS, Sans-Serif;
+width: 100%;
+overflow: hidden;
+margin-bottom: 1em;
+border: 1px solid #625e00;
+border-width: 1px 0;
+background: black url(Images/menubg.jpg) center center repeat-x;
+}
+
+.solidblockmenu li
+{
+display: inline;
+}
+
+.solidblockmenu li a
+{
+float: left;
+color: white;
+padding: 9px 11px;
+text-decoration: none;
+border-right: 1px solid white;
+}
+
+.solidblockmenu li a:visited
+{
+color: white;
+}
+
+.solidblockmenu li a:hover, .solidblockmenu li .current
+{
+color: white;
+background: transparent url(Images/menubg.jpg) center center repeat-x;
+}
+ 
+#loginBox
+{
+	width: 250px;
+	border: Maroon solid 2px;
+	margin: auto;
+}
+
+.contentCentered
+{
+	padding: 10px 0px;
+	text-align: center;	
+}
+
+#emailBox
+{
+	padding: 3px 13px; 
+	height: 525px; 
+	width: 450px;
+}
+
+span.label
+{
+	padding: 2px 0px;
+	display: block;
+	font-weight: bold;
+	color: black;
+	width: 125px;
+}
+
+div.label
+{
+	padding: 2px 2px;
+	font-weight: bold;
+	color: Maroon;
+	font-size: 12pt;
+}
+
+.label2
+{
+	padding: 2px 0px 5px 0px;
+	font-weight: bold;
+	color: Maroon;
+	text-decoration: underline;
+}
+
+.list
+{
+	color: Black;
+	font-size: 10pt;
+	padding-left: 1px;
+}
+
+.menuBlock 
+{ 
+	position: absolute;
+	top: 80px; left: 0px;
+	visibility:hidden;
+	border: 2px gray solid; 
+	padding: 10px; 
+	/*background-color: maroon;*/
+	width: 200px;
+	color: Orange;
+	z-index: 100;
+	background-attachment: fixed;
+	background: maroon url('../Images/menubg.jpg') repeat-x top left;
+}
+
+.menu li 
+{
+	list-style: none;
+	font-weight: bold;
+	font-size: 11pt;
+	font-family: Segoe UI, Helvetica Neue, Trebuchet MS, Sans-Serif;
+	padding: 2px 5px;
+}
+
+.menu a, .menu a:visited 
+{
+	display: block;
+	text-decoration: none;
+	padding: 4px 0px 2px 5px;
+	color: white;
+	font-weight: bold;
+}
+
+.menu a:hover 
+{
+	border-left: silver 3px solid;
+	border-right: silver 3px solid;
+}
+
+
+.topicMenu
+{
+	font-size: 9pt;
+}
+
+.topicMenu a
+{
+	color: Navy;
+	font-variant: small-caps;
+}
+
+.signature
+{
+	padding-right: 0.3em;
+	text-align: right;
+	font-size: 1em;
+	font-family: Segoe UI, Helvetica Neue, Trebuchet MS, Sans-Serif;
+	font-weight: bold;
+}
+
+.quote
+{
+    font-style: italic;
+    font-size: 10pt;
+}
+
+.ministryContact
+{
+    margin: 5px 0px 2px 0px;
+}
+
+.ministryContact SPAN
+{
+    color: Gray;
+    font-weight: bold;
+    font-size: 8pt;
+}
+
+#ministries
+{
+    margin-bottom: 25px;
+}
+
+#ministries H3
+{
+    color: Black;
+    font-size: 10pt;
+    display: block;
+    padding: 10px 0px 2px 0px;
+    text-decoration: none;
+    margin: 3px 0px;    
+}
+
+#ministries A
+{
+    color: rgb(50,25,180);
+    font-size: 8pt;
+    text-decoration: none;
+}
+
+#ministries A:HOVER
+{
+    color: gray;
+    text-decoration: underline;
+}
+
+#ministries P
+{
+    margin: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.pictureCaptionL,.pictureCaptionR
+{
+    padding: 4px;
+    border: 1px solid gray;    
+}
+
+.pictureCaptionL 
+{
+    float: left;
+    margin-right: 8px;
+}
+.pictureCaptionR 
+{
+    float: right;
+    margin-left: 10px;
+}
+
+.caption
+{
+    display: block;
+    color: gray;
+    font-size: 8pt;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;    
+}
+
+#shilohHistory A
+{
+    border: none;
+    text-decoration: none;
+}
+
+#shilohHistory IMG
+{
+    border: none;
+}
+
+.indentedNakedList
+{
+    margin: 10px 2px;
+}
+
+.indentedNakedList 
+{
+    list-style: none;
+    padding-left: 40px;
+}
+
+.h4
+{
+    color:Blue; 
+    font-weight: bold; 
+    font-size: 10pt;
+}
+
+.indent
+{
+    padding-left: 20px;
+    padding-bottom: 8px;
+}
+
